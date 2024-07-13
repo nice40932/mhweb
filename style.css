@@ -190,12 +190,12 @@ a {
 
 .lever2-btn {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 40px; /* 調整這裡來改變項目之間的間距 */
   margin: 20px auto;
+  overflow: auto;
 }
-
 .lever2-btn .label {
   padding: 10px 20px;
   background-color: #fff;
@@ -205,11 +205,19 @@ a {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer; /* 增加游標指標樣式 */
+  text-wrap: nowrap;
+  margin: 0 auto;
 }
 
 .lever2-btn .label:hover {
   background-color: #e13b2d;
   color: #fff;
+}
+
+.btn-box {
+  display: flex;
+  gap: 20px;
+  margin: auto;
 }
 
 .selected {
@@ -404,10 +412,12 @@ a {
     height: 205px;
   }
   .kv img {
-    content: url('./img/kv/MB_kv.jpg');
+    content: url("./img/kv/MB_kv.jpg");
+  }
+  .lever2-btn .label {
+    /* justify-content: flex-start; */
+    margin: auto;
+  }
 }
-}
-
-
 
 /* <!-- 20240713 22:52 測試--> */
