@@ -72,10 +72,12 @@
       <div>#Hashtag</div>
       <div>#Hashtag</div>
     </div> -->
+
+
     <div class="lever2-btn">
       <div class="label" id="socialmedia">社群圖文設計</div>
       <div class="label selected" id="customdesign">客製化設計</div>
-      <div class="label" id="gamevisual">遊戲主視覺</div>
+         <!-- <div class="label" id="gamevisual">遊戲主視覺</div> -->
       <div class="label" id="hahababydesign">Hahababy調性之設計</div>
     </div>
 
@@ -152,7 +154,7 @@
         </div>
       </div>
 
-      <div class="box" id="game-Banner">
+      <!-- <div class="box" id="game-Banner">
         <div class="introduce">
           <div class="txt">
             <h3>簡介</h3>
@@ -217,7 +219,7 @@
           <img src="./img/banner/game/13.jpg" />
         </div>
 
-      </div>
+      </div> -->
 
       <div class="box" id="order-Banner">
         <div class="introduce">
@@ -635,50 +637,36 @@
     });
   </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // 隱藏所有Banner
-      const hideAllBanners = () => {
-        document.getElementById("socialmedia-Banner").style.display = "none";
-        document.getElementById("game-Banner").style.display = "none";
-        document.getElementById("order-Banner").style.display = "none";
-        document.getElementById("hahababy").style.display = "none";
-      };
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hideAllBanners = () => {
+      document.getElementById("socialmedia-Banner").style.display = "none";
+      document.getElementById("order-Banner").style.display = "none";
+      document.getElementById("hahababy").style.display = "none";
+    };
 
-      // 顯示特定Banner
-      const showBanner = (bannerId) => {
-        hideAllBanners();
-        document.getElementById(bannerId).style.display = "flex";
-      };
+    const showBanner = (bannerId) => {
+      hideAllBanners();
+      document.getElementById(bannerId).style.display = "flex";
+    };
 
-      // 預設顯示遊戲主視覺
-      showBanner("order-Banner");
+    // Default display
+    showBanner("order-Banner");
 
-      // 添加點擊事件
-      document
-        .getElementById("socialmedia")
-        .addEventListener("click", function () {
-          showBanner("socialmedia-Banner");
-        });
-
-      document
-        .getElementById("customdesign")
-        .addEventListener("click", function () {
-          showBanner("order-Banner");
-        });
-
-      document
-        .getElementById("gamevisual")
-        .addEventListener("click", function () {
-          showBanner("game-Banner");
-        });
-        document
-        .getElementById("hahababydesign")
-        .addEventListener("click", function () {
-          showBanner("hahababy");
-        });
+    // Click events
+    document.getElementById("socialmedia").addEventListener("click", function () {
+      showBanner("socialmedia-Banner");
     });
-  </script>
+
+    document.getElementById("customdesign").addEventListener("click", function () {
+      showBanner("order-Banner");
+    });
+
+    document.getElementById("hahababydesign").addEventListener("click", function () {
+      showBanner("hahababy");
+    });
+  });
+</script>
 
 <script>
   // 獲取所有標籤元素
