@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans TC", "Roboto", "Shippori Mincho", serif;
+  font-family: "Noto Sans TC", "Arial", "sans-serif", "Roboto",
+    "Shippori Mincho";
   letter-spacing: 0.075em;
 }
 
@@ -15,6 +16,37 @@ body {
 a {
   color: #000;
   text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fac457;
+  border-radius: 5px;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #3c728c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 570px) {
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+.lever2-btn::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lever2-btn::-webkit-scrollbar-thumb {
+  background-color: #ffecde;
+  border-radius: 5px;
 }
 
 /* pc導覽列 *-------------------- start */
@@ -35,6 +67,7 @@ a {
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 .header-right {
@@ -106,6 +139,7 @@ a {
 .kv {
   position: relative;
   z-index: -1;
+  background-color: #fff;
 }
 
 .kv > img {
@@ -167,6 +201,16 @@ a {
   background-color: #fff;
 }
 
+.box-work:hover {
+  /* border: 1px solid #45738e; */
+}
+
+.box-work img {
+  width: 100%;
+}
+.box-work p {
+  font-size: 1px;
+}
 .box-work-video {
   width: calc(48% - 28px);
   display: flex;
@@ -182,28 +226,21 @@ a {
   height: 320px;
 }
 
-.box-work:hover {
-  /* border: 1px solid #45738e; */
-}
-
-.box-work img {
-  width: 100%;
-}
-
 .lever2-btn {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  gap: 40px; /* 調整這裡來改變項目之間的間距 */
-  margin: 20px auto;
+  gap: 40px;
   overflow: auto;
+  position: sticky;
+  top: 60px;
+  padding: 10px 0;
+  background-color: #fff;
 }
 .lever2-btn .label {
   padding: 10px 20px;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 5px;
-  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); */
   font-size: 16px;
   font-weight: bold;
   cursor: pointer; /* 增加游標指標樣式 */
@@ -263,9 +300,7 @@ a {
   margin: 6px 4px;
   flex-direction: column;
 }
-.box-work p {
-  font-size: 1px;
-}
+
 .box-tool {
   display: flex;
   gap: 10px;
@@ -363,7 +398,12 @@ a {
     /* transform: translate(-50%, -50%);*/
     padding: 10px;
   }
-
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    font-size: 16px;
+  }
   .kv-content > h1 {
     font-size: 26px;
   }
@@ -385,6 +425,7 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
   }
   .circle-tool {
     display: inline-flex;
@@ -422,4 +463,26 @@ a {
   }
 }
 
-/* <!-- 20240713 22:52 測試、20240713 23:17 測試--> */
+.goTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #e6685a;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10%;
+}
+
+.goTopBtn:hover {
+  background-color: #de3535;
+}
+
+
+
+/* 20240714 1149update--> */
